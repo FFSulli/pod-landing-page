@@ -1,0 +1,18 @@
+@import "reset";
+@import "variables";
+
+#app {
+  background-color: $black;
+}
+
+.hero {
+  max-width: 1440px;
+  height: 100vh;
+  margin-left: 10.3rem;
+  padding: 8.125rem 0;
+  background-color: $black;
+}
+
+#logo {
+  margin-top: -1.75rem;
+}
