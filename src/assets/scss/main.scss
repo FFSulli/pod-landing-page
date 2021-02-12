@@ -1,13 +1,14 @@
 @import "reset";
 @import "variables";
+@import "typography";
 
 #app {
   background-color: $black;
+  height: 100vh;
 }
 
 .hero {
   max-width: 1440px;
-  height: 100vh;
   margin-left: 10.3rem;
   padding: 8.125rem 0;
   background-color: $black;
@@ -15,4 +16,108 @@
 
 #logo {
   margin-top: -1.75rem;
+}
+
+.hero__description {
+  position: relative;
+  background-color: $black;
+  width: 45.19rem;
+  margin-top: 6.375rem;
+  padding-top: 5.5rem;
+  padding-right: 3.625rem;
+  z-index: 10;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-image: url("~@/assets/logo.png");
+    top: 10px;
+  }
+}
+
+.hero__description-title {
+  font-family: $chivo;
+  font-weight: $light-weight;
+  font-size: 3.25rem;
+  line-height: 3.875rem;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 1.5rem;
+
+  & .hero__description-title--green {
+    color: $green;
+  }
+}
+
+.hero__description-paragraph {
+  font-family: $chivo;
+  font-weight: $light-weight;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: $light-gray;
+  width: 62%;
+  margin-bottom: 2.5rem;
+}
+
+.hero__description-form {
+  position: relative;
+}
+
+.hero__description-input {
+  background-color: $dark-gray;
+  border-style: none;
+  border-radius: 28px;
+  width: 50.2%;
+  height: 56px;
+  padding: 0 2rem;
+
+  &::placeholder {
+    font-family: $chivo;
+    font-weight: $bold-weight;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    color: hsl(225, 11%, 42%);
+  }
+}
+
+.hero__description-cta {
+  position: absolute;
+  display: block;
+  font-family: $chivo;
+  font-weight: $bold-weight;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: $black;
+  background-color: $green;
+  border-style: none;
+  border-radius: 28px;
+  width: 22.4%;
+  padding: 0.5625rem 1.6875rem;
+  bottom: 5px;
+  right: 301px;
+}
+
+.hero__description-customers {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.icon__spotify,
+.icon__apple-podcast{
+  margin-right: 2.25rem;
+}
+
+.icon__google-podcasts {
+  margin-right: 1.6875rem;
+}
+
+.hero__background {
+  position: absolute;
+  bottom: 0;
+  left: 24.2rem;
+  z-index: -10;
 }
